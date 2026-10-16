@@ -1,0 +1,30 @@
+[
+  {
+    "id": "1420973193459156",
+    "url": "https://www.facebook.com/marketplace/item/1420973193459156/",
+    "title": "1998 Toyota Camry LE Sedan 4D",
+    "price": "$5,500",
+    "city": "Los Angeles",
+    "state": "CA",
+    "condition": "Used - Good",
+    "category": "Vehicles > Cars & Trucks > Sedans",
+    "description": "Clean title, 1 owner vehicle. Recently serviced with new brakes and tires. Call or text 555-123-4567 for test drive...",
+    "images": [
+      "https://scontent.xx.fbcdn.net/v/t39.30808-6/example_camry_front.jpg",
+      "https://scontent.xx.fbcdn.net/v/t39.30808-6/example_camry_interior.jpg",
+      "https://scontent.xx.fbcdn.net/v/t39.30808-6/example_camry_engine.jpg"
+    ],
+    "make": "Toyota",
+    "model": "Camry",
+    "trim": "LE Sedan 4D",
+    "year": 1998,
+    "mileage": 142000,
+    "transmission": "AUTOMATIC",
+    "fuel_type": "GASOLINE",
+    "seller_type": "PRIVATE_SELLER",
+    "seller_phone": "555-123-4567",
+    "pseudo_seller_id": "anon_1c373039bfed8879",
+    "is_sold": false,
+    "is_pending": false
+  }
+]
