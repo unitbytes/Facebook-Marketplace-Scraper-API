@@ -1,0 +1,253 @@
+{
+  "name": "Facebook Marketplace Scraper — Bypass 1K Limit, 40+ Fields — Automated Extraction to CSV & Sheets (UnitBytes)",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "## ⚡ Facebook Marketplace Scraper — Bypass 1K Limit, 40+ Fields — Automated n8n Pipeline\n**Powered by [UnitBytes on Apify](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=n8n_io)** ($0.003 / item)\n\n### ⚙️ How It Works\nThis workflow runs on a schedule, calls the **[Facebook-Marketplace-Scraper Apify Actor](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=n8n_io)** via its synchronous REST endpoint, normalizes the extracted fields (`id, url, title, price, city`), and exports a clean CSV file.\n\n### 🚀 30-Second Setup Instructions\n1. **Get your free Apify API Token**: Open [Facebook-Marketplace-Scraper on Apify Store](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=n8n_io) and copy your API token from **Settings → Integrations**.\n2. **Paste your token & search parameters**: Double-click the **\"1. Set Apify Token & Input\"** node and replace `YOUR_APIFY_API_TOKEN` with your token.\n3. **Click \"Test Workflow\"**: The HTTP Request node calls the synchronous UnitBytes Apify endpoint, normalizes the extracted records, and exports a clean CSV file ready for Google Sheets, Airtable, Slack, or OpenAI.\n\n📖 **Documentation & Schema Reference**: [https://unitbytes.com/actors/facebook-marketplace-scraper/](https://unitbytes.com/actors/facebook-marketplace-scraper/)",
+        "height": 380,
+        "width": 520,
+        "color": 4
+      },
+      "id": "42d8890f-7707-5c0f-a018-ffe255f17bd8",
+      "name": "Sticky Note — Setup Guide",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        180,
+        80
+      ]
+    },
+    {
+      "parameters": {
+        "content": "### 📊 Connect Your Destination\nThe **\"3. Normalize Output Fields\"** node outputs flat records (`id, url, title, price, city`).\n\n- **Google Sheets / Airtable**: Connect a Google Sheets (`Append or Update Row`) node after Step 3.\n- **Slack / Telegram / Email Alerts**: Connect a Filter node + Slack node to alert your team on new deals or reviews.\n- **AI Agent / OpenAI**: Connect an OpenAI / LLM Chain node to summarize or classify extracted items.",
+        "height": 220,
+        "width": 420,
+        "color": 5
+      },
+      "id": "a522f039-8c0e-5e7f-9342-8cb3221a62ec",
+      "name": "Sticky Note — Destinations",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        880,
+        140
+      ]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 24
+            }
+          ]
+        }
+      },
+      "id": "efc6a2b5-b3e7-5cf2-a567-b34a66de6285",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        220,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "d9fda874-b722-5c58-a838-9dbcb9359db4",
+              "name": "apifyToken",
+              "value": "YOUR_APIFY_API_TOKEN",
+              "type": "string"
+            },
+            {
+              "id": "379b7418-37d8-5e97-89dc-027b666b67fc",
+              "name": "actorInput",
+              "value": "{\"search_query\": \"iphone\", \"city_slug\": \"sanfrancisco\", \"min_price\": 0, \"max_price\": 2000, \"max_results\": 20, \"concurrency\": 5, \"days_since_listed\": 30, \"sort_by\": \"best_match\"}",
+              "type": "object"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5b1a26fb-c797-5769-a9a9-0cf4c71806b7",
+      "name": "1. Set Apify Token & Input",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        460,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.apify.com/v2/acts/unitbytes~Facebook-Marketplace-Scraper/run-sync-get-dataset-items?token={{ $json.apifyToken }}&format=json&clean=true",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify($json.actorInput) }}",
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "670b0f7b-3724-5c54-a7ae-cd0d9c0e11d8",
+      "name": "2. Run UnitBytes (Facebook-Marketplace-Scraper)",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "b5aeea75-3434-5f53-bd37-0e56077b422e",
+              "name": "id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "6f97ae41-6649-5508-9f0e-08936c4494f4",
+              "name": "url",
+              "value": "={{ $json.url }}",
+              "type": "string"
+            },
+            {
+              "id": "35eb624d-4452-5106-9728-6e1c5985c1b1",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "6b3b9d08-7d08-502b-b719-1234183dddcd",
+              "name": "price",
+              "value": "={{ $json.price }}",
+              "type": "string"
+            },
+            {
+              "id": "70e1042a-f767-5794-8107-3b59368a303d",
+              "name": "city",
+              "value": "={{ $json.city }}",
+              "type": "string"
+            },
+            {
+              "id": "a466500d-f69d-53d2-a8de-677f3996ef46",
+              "name": "state",
+              "value": "={{ $json.state }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "id": "8daabea9-7fd6-5480-9c7f-cf81961326a6",
+      "name": "3. Normalize Output Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        940,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "csv",
+        "options": {
+          "fileName": "facebook-marketplace-scraper-dataset-export.csv"
+        }
+      },
+      "id": "a06f5775-8572-54c2-b125-0c7e29ecae8d",
+      "name": "4. Export to CSV File",
+      "type": "n8n-nodes-base.convertToFile",
+      "typeVersion": 1.1,
+      "position": [
+        1180,
+        480
+      ]
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "1. Set Apify Token & Input",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "1. Set Apify Token & Input": {
+      "main": [
+        [
+          {
+            "node": "2. Run UnitBytes (Facebook-Marketplace-Scraper)",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "2. Run UnitBytes (Facebook-Marketplace-Scraper)": {
+      "main": [
+        [
+          {
+            "node": "3. Normalize Output Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "3. Normalize Output Fields": {
+      "main": [
+        [
+          {
+            "node": "4. Export to CSV File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "meta": {
+    "templateCredsSetupCompleted": false,
+    "instanceId": "030f9420-0ca8-5240-8fe8-208e287a8b19"
+  },
+  "tags": [
+    {
+      "name": "Web Scraping"
+    },
+    {
+      "name": "Apify"
+    },
+    {
+      "name": "UnitBytes"
+    },
+    {
+      "name": "Classifieds & Local Data"
+    }
+  ]
+}
