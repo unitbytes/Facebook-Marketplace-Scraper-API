@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "unitbytes-apify": {
+      "type": "http",
+      "url": "https://mcp.apify.com/?tools=actors,docs,unitbytes/Facebook-Marketplace-Scraper,unitbytes/facebook-marketplace-vehicle-scraper,unitbytes/facebook-marketplace-property-scraper,unitbytes/facebook-marketplace-status-checker"
+    }
+  }
+}

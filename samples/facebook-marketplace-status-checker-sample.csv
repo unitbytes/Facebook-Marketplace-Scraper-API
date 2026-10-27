@@ -1,0 +1,2 @@
+id,url,listing_status,is_sold,is_pending,price,numeric_price,strikethrough_price,currency,title,seller_name,seller_id,seller_profile_url,seller_rating,seller_review_count
+1000000000000002,https://www.facebook.com/marketplace/item/1000000000000002/,ACTIVE,False,False,"$3,650",3650.0,"$3,900",USD,3 Beds 2 Baths - House,Alex M.,pfbid02exampleSellerProfileId123456,https://www.facebook.com/marketplace/profile/pfbid02exampleSellerProfileId123456/,5.0,1

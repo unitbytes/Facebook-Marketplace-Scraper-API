@@ -1,0 +1,2 @@
+id,url,title,price,numeric_price,currency,listing_status,property_type,bedrooms,bathrooms,square_feet,pet_friendly,laundry,parking,heating_ac,street_address,walk_score,transit_score,bike_score,seller_name,seller_rating,city_slug
+1000000000000001,https://www.facebook.com/marketplace/item/1000000000000001/,2 Beds 1 Bath Apartment,"$3,200",3200.0,USD,ACTIVE,Apartment,2,1,920,Cat and dog friendly,In-unit laundry,Garage parking,Central AC,100 Main St,96,88,94,Taylor S.,4.85,sanfrancisco

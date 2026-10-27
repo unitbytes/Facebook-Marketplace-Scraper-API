@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1000000000000003",
+    "url": "https://www.facebook.com/marketplace/item/1000000000000003/",
+    "title": "2017 Toyota Camry · SE Sedan 4D",
+    "price": "$10,600",
+    "numeric_price": 10600.0,
+    "currency": "USD",
+    "listing_status": "ACTIVE",
+    "year": 2017,
+    "make": "Toyota",
+    "model": "Camry",
+    "trim": "SE Sedan 4D",
+    "mileage": 95000,
+    "transmission": "AUTOMATIC",
+    "fuel_type": "GASOLINE",
+    "exterior_color": "Silver",
+    "interior_color": "Black",
+    "vin": "4T1BF1FK5HU123456",
+    "seller_type": "PRIVATE_SELLER",
+    "seller_name": "Chris D.",
+    "seller_id": "100000123456789",
+    "seller_profile_url": "https://www.facebook.com/marketplace/profile/100000123456789/",
+    "seller_rating": 4.9,
+    "seller_review_count": 14,
+    "city_slug": "losangeles"
+  }
+]
