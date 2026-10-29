@@ -3,13 +3,14 @@
 <div align="center">
 
 [![Available on Apify](https://img.shields.io/badge/Available_on-Apify-28B52A?style=for-the-badge&logo=apify&logoColor=white)](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt)
+[![Open in Colab](https://img.shields.io/badge/Open_in-Google_Colab-F9AB00?style=for-the-badge&logo=googlecolab&logoColor=white)](https://colab.research.google.com/github/unitbytes/Facebook-Marketplace-Scraper-API/blob/main/notebooks/quickstart.ipynb)
 [![n8n Creator Hub](https://img.shields.io/badge/n8n_Creator_Hub-@unitbytes-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)](https://n8n.io/creators/unitbytes/)
-[![Zero Login](https://img.shields.io/badge/Account_Required-None-blue?style=for-the-badge)](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt)
+[![Release](https://img.shields.io/github/v/release/unitbytes/Facebook-Marketplace-Scraper-API?style=for-the-badge&logo=github&color=10b981)](https://github.com/unitbytes/Facebook-Marketplace-Scraper-API/releases)
 [![Pricing](https://img.shields.io/badge/Pricing-Pay_Per_Result-orange?style=for-the-badge)](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt)
 
 **Zero-login Facebook Marketplace Scraper API suite on Apify (`$1.50 / 1,000 items`). Extract local classified deals, used cars & odometer mileage, rental & real estate properties, seller ratings, GPS coordinates, HD photo carousels, and live sold/available status checks across 100+ countries.**
 
-[**🚀 Try Live on Apify**](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 39 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
+[**🚀 Try Live on Apify**](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt) • [**📓 Open in Google Colab**](https://colab.research.google.com/github/unitbytes/Facebook-Marketplace-Scraper-API/blob/main/notebooks/quickstart.ipynb) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 39 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
 
 </div>
 
@@ -32,9 +33,9 @@
 ---
 
 <!-- UNITBYTES_REPO_KIT_START -->
-## 📦 Included in This Repository (Python Quickstarts, n8n Workflows, MCP & Sample Data)
+## 📦 Included in This Repository (Python Quickstarts, Google Colab, n8n Workflows, MCP & Sample Data)
 
-This repository contains ready-to-run **Python SDK scripts**, **9-node n8n automation workflow `.json` templates**, **AI Agent MCP configuration (`.cursor/mcp.json`)**, and **sample output datasets (JSON & CSV)**:
+This repository contains ready-to-run **Python SDK scripts**, an **interactive 1-Click Google Colab notebook (`notebooks/quickstart.ipynb`)**, **9-node n8n automation workflow `.json` templates**, **AI Agent MCP configuration (`.cursor/mcp.json`)**, and **sample output datasets (JSON & CSV)**:
 
 | Extraction Engine | 🐍 Python SDK Quickstart | ⚡ n8n Workflow Template | 📊 Sample Output | 🚀 Cloud Console |
 | :--- | :--- | :--- | :---: | :---: |
@@ -43,6 +44,7 @@ This repository contains ready-to-run **Python SDK scripts**, **9-node n8n autom
 | **Facebook Marketplace Property & Rentals Scraper**<br><sub>[`unitbytes/facebook-marketplace-property-scraper`](https://apify.com/unitbytes/facebook-marketplace-property-scraper?fpr=939u3w&fp_sid=gh_fb_mkt) • [Full Schema](https://unitbytes.com/actors/facebook-marketplace-property-scraper/) • [Engineering Playbook](https://unitbytes.com/blog/used-car-vin-real-estate-fsbo-scraping-facebook-marketplace-craigslist-offerup-guide/)</sub> | [`examples/run_facebook_marketplace_property_scraper.py`](examples/run_facebook_marketplace_property_scraper.py) | [`n8n/facebook-marketplace-property-scraper-n8n-workflow.json`](n8n/facebook-marketplace-property-scraper-n8n-workflow.json) | [`JSON`](samples/facebook-marketplace-property-scraper-sample.json) · [`CSV`](samples/facebook-marketplace-property-scraper-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/facebook-marketplace-property-scraper?fpr=939u3w&fp_sid=gh_fb_mkt) |
 | **Facebook Marketplace Details & Status Checker (Sold/Price)**<br><sub>[`unitbytes/facebook-marketplace-status-checker`](https://apify.com/unitbytes/facebook-marketplace-status-checker?fpr=939u3w&fp_sid=gh_fb_mkt) • [Full Schema](https://unitbytes.com/actors/facebook-marketplace-status-checker/) • [Engineering Playbook](https://unitbytes.com/blog/used-car-vin-real-estate-fsbo-scraping-facebook-marketplace-craigslist-offerup-guide/)</sub> | [`examples/run_facebook_marketplace_status_checker.py`](examples/run_facebook_marketplace_status_checker.py) | [`n8n/facebook-marketplace-status-checker-n8n-workflow.json`](n8n/facebook-marketplace-status-checker-n8n-workflow.json) | [`JSON`](samples/facebook-marketplace-status-checker-sample.json) · [`CSV`](samples/facebook-marketplace-status-checker-sample.csv) | [⚡ **Run on Apify**](https://apify.com/unitbytes/facebook-marketplace-status-checker?fpr=939u3w&fp_sid=gh_fb_mkt) |
 
+- 📓 **1-Click Interactive Google Colab Notebook:** Open [`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb) directly in your browser via [**Google Colab ↗**](https://colab.research.google.com/github/unitbytes/Facebook-Marketplace-Scraper-API/blob/main/notebooks/quickstart.ipynb) to inspect sample DataFrames and test live API queries with zero local setup.
 - 🤖 **Cursor, Windsurf & Claude Code MCP Ready:** Includes [`.cursor/mcp.json`](.cursor/mcp.json) pre-configured with `https://mcp.apify.com` so AI coding agents can invoke these UnitBytes scrapers natively.
 - 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 39 pre-built 9-node scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
 - 📚 **Engineering Playbooks:** [**Classifieds Arbitrage Playbook**](https://unitbytes.com/blog/local-classifieds-arbitrage-facebook-marketplace-craigslist-offerup-guide/) • [**Used Car VIN & Auto Leads Playbook**](https://unitbytes.com/blog/used-car-vin-real-estate-fsbo-scraping-facebook-marketplace-craigslist-offerup-guide/) — or browse all guides at **[unitbytes.com/blog](https://unitbytes.com/blog/)**.
@@ -488,7 +490,10 @@ Yes. Connect the Actor to a scheduled cron trigger in Apify or n8n to automatica
 
 ## ⚡ Quick Installation & Local Usage
 
-### 1. Run with Python (`apify-client`)
+### 1. Run Interactively in Google Colab (Zero Local Setup)
+Click **[Open in Google Colab ↗](https://colab.research.google.com/github/unitbytes/Facebook-Marketplace-Scraper-API/blob/main/notebooks/quickstart.ipynb)** ([`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb)) to inspect the sample output DataFrame immediately and run live extractions in your browser without installing Python locally.
+
+### 2. Run Locally with Python (`apify-client`)
 ```bash
 git clone https://github.com/unitbytes/Facebook-Marketplace-Scraper-API.git
 cd Facebook-Marketplace-Scraper-API
@@ -497,12 +502,12 @@ export APIFY_API_TOKEN="your_apify_api_token"
 python examples/run_facebook_marketplace_scraper.py
 ```
 
-### 2. Import into n8n (Self-Hosted or Cloud)
+### 3. Import into n8n (Self-Hosted or Cloud)
 1. Open any `.json` file inside the [`n8n/`](n8n/) folder (or copy in 1 click from **[unitbytes.com/n8n](https://unitbytes.com/n8n/)** / **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)**).
 2. Press **`Ctrl+V` / `Cmd+V`** directly onto your n8n workflow canvas.
 3. Configure your Apify API Token in the `HTTP Header Auth` credential on Node `2. Run UnitBytes (...)` (and customize your search inputs in Node `1. Configure Search & Rules`), then click **Test Workflow**.
 
-### 3. Use with AI Coding Agents (Cursor, Windsurf & Claude Code MCP)
+### 4. Use with AI Coding Agents (Cursor, Windsurf & Claude Code MCP)
 This repository includes a ready-to-use Model Context Protocol configuration at [`.cursor/mcp.json`](.cursor/mcp.json) pointing to `https://mcp.apify.com` with this suite's UnitBytes actors pre-registered. Open this folder in **Cursor** or **Windsurf** to let your AI agent run live extractions and inspect schemas automatically.
 
 ---
