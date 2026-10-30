@@ -25,7 +25,7 @@ run_input = {
     "city_slug": "sanfrancisco",
     "category": "all",
     "min_price": 0,
-    "max_price": 2000,
+    "max_price": 50000,
     "max_results": 20
 }
 

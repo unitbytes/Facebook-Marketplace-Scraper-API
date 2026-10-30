@@ -23,10 +23,10 @@ client = ApifyClient(APIFY_TOKEN)
 run_input = {
     "category": "propertyrentals",
     "city_slug": "chicago",
-    "search_query": "2 bedroom apartment",
     "min_price": 800,
     "max_price": 3500,
-    "max_results": 20
+    "max_results": 20,
+    "scrape_details": True
 }
 
 run = client.actor("unitbytes/facebook-marketplace-property-scraper").call(run_input=run_input)

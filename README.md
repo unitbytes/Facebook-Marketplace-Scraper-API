@@ -10,7 +10,7 @@
 
 **Zero-login Facebook Marketplace Scraper API suite on Apify (`$1.50 / 1,000 items`). Extract local classified deals, used cars & odometer mileage, rental & real estate properties, seller ratings, GPS coordinates, HD photo carousels, and live sold/available status checks across 100+ countries.**
 
-[**🚀 Try Live on Apify**](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt) • [**📓 Open in Google Colab**](https://colab.research.google.com/github/unitbytes/Facebook-Marketplace-Scraper-API/blob/main/notebooks/quickstart.ipynb) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 39 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
+[**🚀 Try Live on Apify**](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt) • [**📓 Open in Google Colab**](https://colab.research.google.com/github/unitbytes/Facebook-Marketplace-Scraper-API/blob/main/notebooks/quickstart.ipynb) • [**⚡ Official n8n Creator Hub**](https://n8n.io/creators/unitbytes/) • [**🔧 41 Free n8n Templates**](https://unitbytes.com/n8n/) • [**📖 Documentation & Schemas**](https://unitbytes.com/actors/) • [**📚 Engineering Playbooks**](https://unitbytes.com/blog/)
 
 </div>
 
@@ -46,7 +46,7 @@ This repository contains ready-to-run **Python SDK scripts**, an **interactive 1
 
 - 📓 **1-Click Interactive Google Colab Notebook:** Open [`notebooks/quickstart.ipynb`](notebooks/quickstart.ipynb) directly in your browser via [**Google Colab ↗**](https://colab.research.google.com/github/unitbytes/Facebook-Marketplace-Scraper-API/blob/main/notebooks/quickstart.ipynb) to inspect sample DataFrames and test live API queries with zero local setup.
 - 🤖 **Cursor, Windsurf & Claude Code MCP Ready:** Includes [`.cursor/mcp.json`](.cursor/mcp.json) pre-configured with `https://mcp.apify.com` so AI coding agents can invoke these UnitBytes scrapers natively.
-- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 39 pre-built 9-node scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
+- 💡 **Using n8n?** Explore our official creator profile at **[n8n.io/creators/unitbytes](https://n8n.io/creators/unitbytes/)** or copy all 41 pre-built 9-node scraping workflows (`Ctrl+V`) at **[unitbytes.com/n8n](https://unitbytes.com/n8n/)**.
 - 📚 **Engineering Playbooks:** [**Classifieds Arbitrage Playbook**](https://unitbytes.com/blog/local-classifieds-arbitrage-facebook-marketplace-craigslist-offerup-guide/) • [**Used Car VIN & Auto Leads Playbook**](https://unitbytes.com/blog/used-car-vin-real-estate-fsbo-scraping-facebook-marketplace-craigslist-offerup-guide/) — or browse all guides at **[unitbytes.com/blog](https://unitbytes.com/blog/)**.
 <!-- UNITBYTES_REPO_KIT_END -->
 
@@ -74,7 +74,7 @@ Launch pre-configured extraction templates directly in the Apify Cloud Console w
   </a>
 </p>
 
-Scrape Facebook Marketplace vehicles (VIN, mileage, make/model), apartment rentals (beds, baths, sqft, walk score), seller profiles, and local deals across multiple cities or ZIP codes with 50+ structured fields, status checks, and HD photos.
+Scrape Facebook Marketplace vehicles (VIN, mileage, make/model), apartment rentals (beds, baths, sqft, walk score), seller profiles, and local deals across multiple cities or ZIP codes.
 
 - **Pricing:** `$0.0015 / item` (Pay-Per-Event — `$0.0015` search item, `$0.0035` full listing detail (Gold+ tiers from `$0.0006`))
 - **Cloud Console:** [https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt](https://apify.com/unitbytes/Facebook-Marketplace-Scraper?fpr=939u3w&fp_sid=gh_fb_mkt)
@@ -99,7 +99,7 @@ Scrape Facebook Marketplace vehicles (VIN, mileage, make/model), apartment renta
 | `min_price` | `integer` | `0` | Minimum listing price in local currency. |
 | `max_price` | `integer` | `50000` | Maximum listing price in local currency. |
 | `max_results` *(Required)* | `integer` | `20` | Maximum number of listings to scrape. |
-| `scrape_details` | `boolean` | `False` | Fetch full listing detail pages via GraphQL for complete descriptions, 10-30+ HD photo carousels, VINs, walk scores, and seller ratings. Keep disabled for ultra-fast, low-cost discovery mode (still extracts price, status, year/mileage, beds/baths/sqft, seller ID, and primary. |
+| `scrape_details` | `boolean` | `True` | Fetch full listing detail pages via GraphQL for complete descriptions, 10-30+ HD photo carousels, VINs, walk scores, and seller ratings. Disable for ultra-fast, low-cost discovery mode (still extracts price, status, year/mileage, beds/baths/sqft, seller ID, and primary photo). |
 | `include_all_photos` | `boolean` | `True` | When Deep Inspection is enabled, scrape the full high-resolution photo carousel (10-30+ HD photos) and videos. Disable to fetch only the primary listing photo for faster runs. |
 | `sort_by` | `string` | `best_match` | How to sort the marketplace results. |
 | `days_since_listed` | `integer` | `7` | Only scrape listings posted within this many days (1 = last 24h, 7 = last week, 30 = last month). |
@@ -126,7 +126,7 @@ run_input = {
     "city_slug": "sanfrancisco",
     "category": "all",
     "min_price": 0,
-    "max_price": 2000,
+    "max_price": 50000,
     "max_results": 20
 }
 
@@ -217,7 +217,7 @@ Scrape used cars, trucks, and motorcycles from Facebook Marketplace by city, ZIP
 | `transmission` | `string` | `all` | Filter vehicles by transmission type. |
 | `body_style` | `string` | — | Filter by body style (e.g. 'suv', 'sedan', 'truck', 'coupe', 'hatchback', 'van'). |
 | `max_results` *(Required)* | `integer` | `20` | Maximum number of vehicles to scrape. |
-| `scrape_details` | `boolean` | `False` | Enable Deep Inspection to extract 17-digit VIN, trim, fuel type, exterior/interior color, PRIVATE_SELLER vs. DEALERSHIP classification, 5-star seller ratings, and 10-30+ HD photos. Disable for ultra-fast discovery (still extracts year, mileage, price, and status). |
+| `scrape_details` | `boolean` | `True` | Enable Deep Inspection to extract 17-digit VIN, trim, fuel type, exterior/interior color, PRIVATE_SELLER vs. DEALERSHIP classification, 5-star seller ratings, and 10-30+ HD photos. Disable for ultra-fast discovery (still extracts year, mileage, price, and status). |
 | `days_since_listed` | `integer` | `7` | Only include vehicles posted within this many days (1 = last 24h, 7 = past week, 30 = past month). |
 | `sort_by` | `string` | `creation_time_descend` | Sort order for vehicle search. |
 | `radius` | `integer` | `500` | Search radius in kilometers (up to 500km). |
@@ -314,7 +314,7 @@ Scrape apartments for rent, houses for rent, and homes for sale on Facebook Mark
 | :--- | :---: | :--- | :--- |
 | `category` | `string` | `propertyrentals` | Choose between Property Rentals (apartments, houses, rooms for rent) or Property for Sale. |
 | `city_slug` | `string` | `chicago` | Target city slug (e.g. 'newyork', 'sanfrancisco', 'chicago', 'miami'), 5-digit US ZIP code ('90210'), or comma-separated multi-city list ('austin, dallas, houston'). |
-| `search_query` | `string` | `2 bedroom apartment` | Optional keyword filter (e.g. 'studio', 'loft', 'townhouse') or leave empty to scrape the full property category feed. |
+| `search_query` | `string` | — | Optional keyword filter (e.g. 'studio', 'loft', 'townhouse') or leave empty to scrape the full property category feed. |
 | `min_price` | `integer` | `500` | Minimum monthly rent or sale price. |
 | `max_price` | `integer` | `10000` | Maximum monthly rent or sale price. |
 | `min_bedrooms` | `integer` | — | Minimum number of bedrooms (applied upstream on Facebook Marketplace). |
@@ -323,7 +323,7 @@ Scrape apartments for rent, houses for rent, and homes for sale on Facebook Mark
 | `min_sqft` | `integer` | — | Minimum property square footage / area. |
 | `max_sqft` | `integer` | — | Maximum property square footage / area. |
 | `max_results` *(Required)* | `integer` | `20` | Maximum number of property listings to scrape. |
-| `scrape_details` | `boolean` | `False` | Enable Deep Inspection to extract pet policy, laundry type, parking, heating/AC, street address, Walk/Transit/Bike scores, landlord ratings, and 10-30+ HD photos. Disable for ultra-fast discovery (still extracts price, bedrooms, bathrooms, and sqft). |
+| `scrape_details` | `boolean` | `True` | Enable Deep Inspection to extract pet policy, laundry type, parking, heating/AC, street address, Walk/Transit/Bike scores, landlord ratings, and 10-30+ HD photos. Disable for ultra-fast discovery (still extracts price, bedrooms, bathrooms, and sqft). |
 | `days_since_listed` | `integer` | `7` | Only include properties posted within this many days (1 = last 24h, 7 = past week, 30 = past month). |
 | `sort_by` | `string` | `creation_time_descend` | Sort order for property search. |
 | `start_urls` | `array` | — | Paste Facebook Marketplace property search URLs, landlord profile URLs (/marketplace/profile/<id>/), or listing URLs. |
@@ -342,10 +342,10 @@ client = ApifyClient(APIFY_TOKEN)
 run_input = {
     "category": "propertyrentals",
     "city_slug": "chicago",
-    "search_query": "2 bedroom apartment",
     "min_price": 800,
     "max_price": 3500,
-    "max_results": 20
+    "max_results": 20,
+    "scrape_details": True
 }
 
 run = client.actor("unitbytes/facebook-marketplace-property-scraper").call(run_input=run_input)
@@ -417,9 +417,10 @@ Bulk check Facebook Marketplace item URLs, Item IDs, or Seller Profile URLs for 
 
 | Parameter | Type | Default / Prefill | Description |
 | :--- | :---: | :--- | :--- |
-| `start_urls` | `array` | `[{"url": "https://www.facebook.com/marketplace/i` | Paste one or more Facebook Marketplace item URLs (https://www.facebook.com/marketplace/item/123456789/), raw numeric Item IDs, or Seller Profile URLs (/marketplace/profile/<id>/) to check live status (ACTIVE, SOLD, PENDING) and extract full listing details. |
-| `fast_mode` | `boolean` | `True` | Extracts availability status (ACTIVE/SOLD/PENDING), price, markdowns, description, seller rating, vehicle/property specs, and primary photo in 1 lightweight request (skips extra 30-photo HD gallery call). |
-| `include_all_photos` | `boolean` | `False` | Disable Fast Mode and enable this option if you also want to fetch the complete high-resolution photo gallery via GraphQL. |
+| `start_urls` | `array` | `[{"url": "https://www.facebook.com/marketplace/p` | Paste one or more Facebook Marketplace item URLs (https://www.facebook.com/marketplace/item/123456789/), raw numeric Item IDs, or Seller Profile URLs (/marketplace/profile/<id>/) to check live status (ACTIVE, SOLD, PENDING) and extract full listing details. |
+| `scrape_details` | `boolean` | `True` | Extracts full availability status (ACTIVE/SOLD/PENDING), price, markdowns, description, seller rating, vehicle/property specs, and photo gallery. |
+| `include_all_photos` | `boolean` | `True` | Fetch the complete high-resolution photo gallery via GraphQL. |
+| `fast_mode` | `boolean` | `False` | Skip per-item GraphQL detail inspection when scanning Seller Profile URLs. |
 | `max_results` *(Required)* | `integer` | `50` | Maximum number of items to process (especially useful when passing Seller Profile URLs). |
 | `concurrency` | `integer` | `5` | Number of listings to verify in parallel (1-10). |
 | `proxy_configuration` | `object` | `{"useApifyProxy": true, "apifyProxyGroups": ["RE` | Select proxies to be used by your scraper. |
@@ -437,12 +438,13 @@ client = ApifyClient(APIFY_TOKEN)
 run_input = {
     "start_urls": [
         {
-            "url": "https://www.facebook.com/marketplace/item/1000000000000002/"
+            "url": "https://www.facebook.com/marketplace/profile/pfbid02exampleSellerProfileId123456/"
         }
     ],
+    "scrape_details": True,
+    "include_all_photos": True,
     "max_results": 50,
-    "fast_mode": True,
-    "include_all_photos": False
+    "fast_mode": False
 }
 
 run = client.actor("unitbytes/facebook-marketplace-status-checker").call(run_input=run_input)
@@ -518,6 +520,6 @@ Don't want to manage API tokens or scripts? **UnitBytes Data Delivery** provides
 
 - 🌐 **Request a Sample Dataset:** [https://unitbytes.com/#enterprise-intake](https://unitbytes.com/#enterprise-intake)
 - 📧 **Direct Engineering Contact:** [contact@unitbytes.com](mailto:contact@unitbytes.com)
-- ⚡ **Explore All 39 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
+- ⚡ **Explore All 41 Scrapers:** [https://unitbytes.com/actors/](https://unitbytes.com/actors/)
 - 📚 **Engineering Playbooks & Guides:** [https://unitbytes.com/blog/](https://unitbytes.com/blog/)
 - 🔗 **Official n8n Creator Profile:** [https://n8n.io/creators/unitbytes/](https://n8n.io/creators/unitbytes/)

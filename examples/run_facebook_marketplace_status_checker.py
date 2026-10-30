@@ -23,12 +23,13 @@ client = ApifyClient(APIFY_TOKEN)
 run_input = {
     "start_urls": [
         {
-            "url": "https://www.facebook.com/marketplace/item/1000000000000002/"
+            "url": "https://www.facebook.com/marketplace/profile/pfbid02exampleSellerProfileId123456/"
         }
     ],
+    "scrape_details": True,
+    "include_all_photos": True,
     "max_results": 50,
-    "fast_mode": True,
-    "include_all_photos": False
+    "fast_mode": False
 }
 
 run = client.actor("unitbytes/facebook-marketplace-status-checker").call(run_input=run_input)
