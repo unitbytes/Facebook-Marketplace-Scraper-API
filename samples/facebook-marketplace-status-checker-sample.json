@@ -1,0 +1,19 @@
+[
+  {
+    "id": "1000000000000002",
+    "url": "https://www.facebook.com/marketplace/item/1000000000000002/",
+    "listing_status": "ACTIVE",
+    "is_sold": false,
+    "is_pending": false,
+    "price": "$3,650",
+    "numeric_price": 3650.0,
+    "strikethrough_price": "$3,900",
+    "currency": "USD",
+    "title": "3 Beds 2 Baths - House",
+    "seller_name": "Alex M.",
+    "seller_id": "pfbid02exampleSellerProfileId123456",
+    "seller_profile_url": "https://www.facebook.com/marketplace/profile/pfbid02exampleSellerProfileId123456/",
+    "seller_rating": 5.0,
+    "seller_review_count": 1
+  }
+]

@@ -1,0 +1,91 @@
+[
+  {
+    "seed_item_id": "164026455XXXXXX",
+    "seed_item_url": "https://www.facebook.com/marketplace/item/164026455XXXXXX/",
+    "seller_id": "100000807XXXXXX",
+    "seller_name": "Alex M. [Masked]",
+    "inferred_seller_tier": "HIGH_VOLUME_DEALER",
+    "is_undisclosed_dealer": true,
+    "active_listings_count": 46,
+    "sold_listings_count": 9,
+    "total_listings_count": 55,
+    "join_date_iso": "2010-03-02",
+    "seller_rating": 3.9,
+    "seller_review_count": 21,
+    "combined_rating": 4.0,
+    "combined_review_count": 22,
+    "personal_vanity_url": "https://www.facebook.com/alex.m.masked/",
+    "marketplace_profile_url": "https://www.facebook.com/marketplace/profile/100000807XXXXXX/",
+    "city_display_name": "Hempstead, NY",
+    "seller": {
+      "seller_id": "100000807XXXXXX",
+      "marketplace_user_profile_id": "146716534XXXXXX",
+      "seller_name": "Alex M. [Masked]",
+      "join_time": 1267490749,
+      "join_date_iso": "2010-03-02",
+      "join_year": 2010,
+      "seller_rating": 3.9,
+      "seller_review_count": 21,
+      "combined_rating": 4.0,
+      "combined_review_count": 22,
+      "seller_ratings_are_private": false,
+      "marketplace_profile_url": "https://www.facebook.com/marketplace/profile/100000807XXXXXX/",
+      "personal_vanity_url": "https://www.facebook.com/alex.m.masked/",
+      "personal_vanity_handle": "alex.m.masked",
+      "seller_avatar_url": "https://scontent.xx.fbcdn.net/v/t39.30808-1/masked_avatar_160x160.jpg",
+      "primary_city": "Hempstead",
+      "primary_state": "NY",
+      "city_display_name": "Hempstead, NY",
+      "is_seller_business_onboarded": false,
+      "should_show_business_seller_label": false,
+      "vehicle_seller_type": "PRIVATE_SELLER",
+      "dealership_name": null,
+      "inferred_seller_tier": "HIGH_VOLUME_DEALER",
+      "is_undisclosed_dealer": true
+    },
+    "active_listings": [
+      {
+        "item_id": "164026455XXXXXX",
+        "url": "https://www.facebook.com/marketplace/item/164026455XXXXXX/",
+        "title": "2026 BMW X3 xDrive",
+        "price": "$43,374",
+        "numeric_price": 43374.0,
+        "original_price": null,
+        "status": "ACTIVE",
+        "is_live": true,
+        "is_sold": false,
+        "is_pending": false,
+        "city": "Hempstead",
+        "state": "NY",
+        "image_url": "https://scontent.xx.fbcdn.net/v/t39.30808-6/masked_listing_active_1.jpg",
+        "subtitles": [
+          "21K miles"
+        ],
+        "seller_id": "100000807XXXXXX",
+        "is_seed_item": true
+      }
+    ],
+    "sold_listings": [
+      {
+        "item_id": "161709995XXXXXX",
+        "url": "https://www.facebook.com/marketplace/item/161709995XXXXXX/",
+        "title": "2012 Ford Escape XLT",
+        "price": "$4,600",
+        "numeric_price": 4600.0,
+        "original_price": "$5,200",
+        "status": "SOLD",
+        "is_live": false,
+        "is_sold": true,
+        "is_pending": false,
+        "city": "Massapequa Park",
+        "state": "NY",
+        "image_url": "https://scontent.xx.fbcdn.net/v/t39.30808-6/masked_listing_sold_1.jpg",
+        "subtitles": [
+          "118K miles"
+        ],
+        "seller_id": "100000807XXXXXX",
+        "is_seed_item": false
+      }
+    ]
+  }
+]

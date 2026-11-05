@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1000000000000001",
+    "url": "https://www.facebook.com/marketplace/item/1000000000000001/",
+    "title": "2 Beds 1 Bath Apartment",
+    "price": "$3,200",
+    "numeric_price": 3200.0,
+    "currency": "USD",
+    "listing_status": "ACTIVE",
+    "property_type": "Apartment",
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "square_feet": 920,
+    "pet_friendly": "Cat and dog friendly",
+    "laundry": "In-unit laundry",
+    "parking": "Garage parking",
+    "heating_ac": "Central AC",
+    "street_address": "100 Main St",
+    "walk_score": 96,
+    "transit_score": 88,
+    "bike_score": 94,
+    "seller_name": "Taylor S.",
+    "seller_rating": 4.85,
+    "city_slug": "sanfrancisco"
+  }
+]
